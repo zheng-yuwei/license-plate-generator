@@ -3,7 +3,6 @@
 Created on 2019/4/17
 File generate_char_image
 @author:ZhengYuwei
-@ref: https://github.com/huxiaoman7/mxnet-cnn-plate-recognition, @author Huxiaoman
 """
 from PIL import Image
 from PIL import ImageDraw
