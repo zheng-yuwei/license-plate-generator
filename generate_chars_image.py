@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on 2019/4/17
-File generate_char_image
+File generate_chars_image
 @author:ZhengYuwei
 """
 from PIL import Image
