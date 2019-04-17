@@ -3,10 +3,10 @@
 Created on 2019/4/17
 File generate_license_plate
 @author:ZhengYuwei
-1. 产生车牌号：generate_lic_plt_no
+1. 产生车牌号：generate_license_plate_number
     1.1 定义车牌号中每一位车牌元素：license_plate_elements
     2.1 产生车牌号标签：针对特定类型的车牌，从车牌元素中选择元素组成车牌号
-2. 产生车牌图片：generate_lic_plt_image
+2. 产生车牌图片：generate_license_plate_image
     2.1 为车牌号产生车牌号图形：generate_chars_image
     2.2 加车牌类型底牌
 3. 加扰动元素进行数据增强： augment_image
