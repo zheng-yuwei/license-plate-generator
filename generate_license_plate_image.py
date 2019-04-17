@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on 2019/4/17
-File generate_lic_plt_image
+File generate_license_plate_image
 @author:ZhengYuwei
 """
 import cv2
