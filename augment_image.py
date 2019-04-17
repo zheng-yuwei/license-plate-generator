@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on 2019/4/17
-File generate_char_image
+File augment_image
 @author:ZhengYuwei
 @ref: https://github.com/huxiaoman7/mxnet-cnn-plate-recognition, @author Huxiaoman
 """
