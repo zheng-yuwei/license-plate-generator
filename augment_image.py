@@ -4,6 +4,8 @@ Created on 2019/4/17
 File augment_image
 @author:ZhengYuwei
 @ref: https://github.com/huxiaoman7/mxnet-cnn-plate-recognition, @author Huxiaoman
+功能：
+进行图像增强：透视变换、HSV变化、添加背景、高斯噪声、添加污渍
 """
 import cv2
 import numpy as np
