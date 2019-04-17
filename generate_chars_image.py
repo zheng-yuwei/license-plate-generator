@@ -3,6 +3,7 @@
 Created on 2019/4/17
 File generate_chars_image
 @author:ZhengYuwei
+功能：生成车牌号字符图像：背景为白色，字体为黑色
 """
 from PIL import Image
 from PIL import ImageDraw
