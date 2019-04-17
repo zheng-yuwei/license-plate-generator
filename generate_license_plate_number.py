@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on 2019/4/17
-File generate_lic_plt_no
+File generate_license_plate_number
 @author:ZhengYuwei
 功能：
 定制不同类型车牌的车牌号规则，生成指定数量的车牌号
