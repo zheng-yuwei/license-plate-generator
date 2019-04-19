@@ -8,7 +8,6 @@ File generate_license_plate_number
 """
 import numpy as np
 from license_plate_elements import LicensePlateElements
-np.random.seed(0)
 
 
 class LicensePlateNoGenerator(object):
@@ -42,26 +41,28 @@ class LicensePlateNoGenerator(object):
         if self.plate_type in ['single_blue', 'single_yellow']:
             license_plate_numbers = self.generate_standard_license_no(num)
         # 小型新能源车牌号规则
-        if self.plate_type == 'small_new_energy':
+        elif self.plate_type == 'small_new_energy':
             license_plate_numbers = self.generate_small_new_energy_license_no(num)
         # 大型新能源车牌号规则
-        if self.plate_type == 'big_new_energy':
+        elif self.plate_type == 'big_new_energy':
             pass
         # 警车车牌号规则
-        if self.plate_type == 'police':
+        elif self.plate_type == 'police':
             pass
         # 军区车车牌号规则
-        if self.plate_type == 'single_army':
+        elif self.plate_type == 'single_army':
             pass
         # 香港车牌号规则
-        if self.plate_type == 'hk':
+        elif self.plate_type == 'hk':
             pass
         # 澳门车牌号规则
-        if self.plate_type == 'macau':
+        elif self.plate_type == 'macau':
             pass
         # 黑色底牌车牌号规则
-        if self.plate_type == 'single_black':
+        elif self.plate_type == 'single_black':
             pass
+        else:
+            raise ValueError('暂时不支持该类型车牌！')
         
         return license_plate_numbers
     

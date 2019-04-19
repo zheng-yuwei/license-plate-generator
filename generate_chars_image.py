@@ -9,6 +9,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 import numpy as np
+import cv2
 
 
 class CharsImageGenerator(object):
@@ -50,21 +51,20 @@ class CharsImageGenerator(object):
             self.char_interval = 18  # 字符间的间隔
             self.point_size = 62  # 第2个字符与第三个字符间有一个点，该点的尺寸
         else:
-            print('目前不支持该类型')
+            raise ValueError('目前不支持该类型车牌！')
     
     def generate_images(self, plate_nums):
-        """ 根据车牌号列表，生成车牌号图片
-        :param plate_nums:
+        """ 根据车牌号列表，生成车牌号图片：背景为白色，字体为黑色
+        :param plate_nums: 车牌号
         :return:
         """
-        plate_images = None
         if self.plate_type in ['single_blue', 'single_yellow', ]:
             plate_images = self.generate_440_140_plate(plate_nums)
         elif self.plate_type == 'small_new_energy':
             plate_images = self.generate_480_140_plate(plate_nums)
         else:
-            print('该类型车牌目前功能尚未完成！')
-            
+            raise ValueError('该类型车牌目前功能尚未完成！')
+        
         return plate_images
     
     def generate_440_140_plate(self, plate_nums):
