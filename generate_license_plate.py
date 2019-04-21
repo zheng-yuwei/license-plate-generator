@@ -24,11 +24,12 @@ from augment_image import ImageAugmentation
 class LicensePlateGenerator(object):
     
     @staticmethod
-    def generate_license_plate_images(plate_type, batch_size, save_path):
+    def generate_license_plate_images(plate_type, batch_size, save_path, shift_index=0):
         """ 生成特定数量的、指定车牌类型的车牌图片，并保存到指定目录下
         :param plate_type: 车牌类型
         :param batch_size: 车牌号数量
         :param save_path: txt文件根目录
+        :param shift_index: 图片名称保存的前缀偏移量
         :return:
         """
         sys.stdout.write('\r>> 生成车牌号图片...')
@@ -51,11 +52,11 @@ class LicensePlateGenerator(object):
         save_path = os.path.join(save_path, plate_type)
         if not os.path.exists(save_path):
             os.makedirs(save_path)
-        prefix_len = len(str(int(batch_size)))  # 图片前缀位数
+        prefix_len = 9  # 图片前缀位数，亿
         global plate_height
         plate_width = int(chars_image_generator.plate_width * plate_height / chars_image_generator.plate_height)
         for index, char_image in enumerate(chars_images):
-            image_name = str(index).zfill(prefix_len) + '_' + plate_nums[index] + '.jpg'
+            image_name = str(shift_index + index).zfill(prefix_len) + '_' + plate_nums[index] + '.jpg'
             image_path = os.path.join(save_path, image_name)
             image = augmentation.augment(char_image)
             image = cv2.resize(image, (plate_width, plate_height))
@@ -68,8 +69,15 @@ class LicensePlateGenerator(object):
     
 if __name__ == '__main__':
     plate_height = 72
-    mini_batch_size = 1000
-    iter_times = 100
+    # 每个颜色的生成
+    blue_batch_size = 1400
+    yellow_batch_size = 300
+    new_energy_batch_size = 300
+    # 迭代次数
+    iter_times = 10000
+    # 保存文件夹名称
+    file_path = os.path.join(os.getcwd(), 'plate_images')
+    start_index = 0
     sys.stdout.write('{}: total {} iterations ...\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                                                             iter_times))
     sys.stdout.flush()
@@ -77,13 +85,19 @@ if __name__ == '__main__':
         sys.stdout.write('\r{}: iter {}...\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), i))
         sys.stdout.flush()
         LicensePlateGenerator.generate_license_plate_images('single_blue',
-                                                            batch_size=mini_batch_size,
-                                                            save_path=os.path.join(os.getcwd(), 'plate_images'))
+                                                            batch_size=blue_batch_size,
+                                                            save_path=file_path,
+                                                            shift_index=start_index)
+        start_index += blue_batch_size
         LicensePlateGenerator.generate_license_plate_images('single_yellow',
-                                                            batch_size=mini_batch_size,
-                                                            save_path=os.path.join(os.getcwd(), 'plate_images'))
+                                                            batch_size=yellow_batch_size,
+                                                            save_path=file_path,
+                                                            shift_index=start_index)
+        start_index += yellow_batch_size
         LicensePlateGenerator.generate_license_plate_images('small_new_energy',
-                                                            batch_size=mini_batch_size,
-                                                            save_path=os.path.join(os.getcwd(), 'plate_images'))
-    sys.stdout.write('\r{}: done...\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), i))
+                                                            batch_size=new_energy_batch_size,
+                                                            save_path=file_path,
+                                                            shift_index=start_index)
+        start_index += new_energy_batch_size
+    sys.stdout.write('\r{}: done...\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), iter_times))
     sys.stdout.flush()
