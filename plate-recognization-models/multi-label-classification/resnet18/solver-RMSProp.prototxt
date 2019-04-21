@@ -1,0 +1,23 @@
+net: "train_test.prototxt"
+
+# 测试需要加载测试数据，占内存，早期训练先不用
+# test_iter: 150  # 30000 / 200 = 150
+# test_interval: 100  # 240000 / 200 = 1200
+# test_initialization: false
+display: 500
+average_loss: 100
+
+type: "RMSProp"
+lr_policy: "fixed"
+base_lr: 0.0001
+rms_decay: 0.98
+
+max_iter:  150000
+
+weight_decay: 0.0005
+
+snapshot: 5000
+snapshot_prefix: "/home/data_160/data1/license_plate/models/resnet-9label-RMSProp/lp_recognization"
+solver_mode: GPU
+snapshot_format: BINARYPROTO
+

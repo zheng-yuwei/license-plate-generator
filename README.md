@@ -2,6 +2,15 @@
 @author **郑煜伟** in 2019-04-18  
 目前支持蓝色标准车牌，黄色标准车牌，小型新能源车牌的车牌生成。
 
+### 文件夹目录说明
+1. background: 车牌生成时，随机选取其中一张作为背景照片放置在车牌后面，类似于车头部分；
+2. doc：放置了车牌号的国家规定文档；
+3. font：车牌号的英文/中文字体；
+4. images：各种车牌底牌（蓝色底牌等），污渍图片（图像增强使用）；
+5. plate_images：生成的车牌图片的存放路径。
+6. plate-recognization-models：车牌识别模型
+    - multi-label-classification：多标签分类模型，下面包含了生成lmdb的脚本和参考resnet18写的多标签分类模型；
+
 ### 程序结构说明
 - license_plate_elements.py: 车牌号元素，其中定义：
 1. 车牌号中，不同车牌位的取值范围；
@@ -28,6 +37,10 @@
 2. 生成车牌图片；
 3. 进行数据增强；
 4. 保存图片。
+
+# 生成lmdb格式数据集
+1. generate_txt.py：读取车牌图片目录下的图片，根据图片名称中的车牌号、license_plate_elements.py中车牌号字符与标签的映射关系，shuffle后生成全量、训练、测试、验证数据集的label文件（格式：图片相对路径 char1 char2 char3 char4 char5 char6 char7 char8 is8char，其中7个字符的车牌，char8为随机挑选，is8char为0）；
+2. generate_lmdb.sh：调用generate_txt.py生成txt，然后调用caffe中改造过的generate_imageset二进制执行文件生成lmdb数据集。
 
 ### TODO:
 1. 将其他车牌类型的规则定义好，以生成其他类型的车牌；
