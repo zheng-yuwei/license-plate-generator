@@ -1120,12 +1120,9 @@ layer {
 }
 layer {
   name: "prob1"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip1"
-  bottom: "label_1"
   top: "prob1"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第2位字符
@@ -1153,12 +1150,9 @@ layer {
 }
 layer {
   name: "prob2"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip2"
-  bottom: "label_2"
   top: "prob2"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第3位字符
@@ -1186,12 +1180,9 @@ layer {
 }
 layer {
   name: "prob3"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip3"
-  bottom: "label_3"
   top: "prob3"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第4位字符
@@ -1219,12 +1210,9 @@ layer {
 }
 layer {
   name: "prob4"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip4"
-  bottom: "label_4"
   top: "prob4"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第5位字符
@@ -1252,12 +1240,9 @@ layer {
 }
 layer {
   name: "prob5"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip5"
-  bottom: "label_5"
   top: "prob5"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第6位字符
@@ -1285,12 +1270,9 @@ layer {
 }
 layer {
   name: "prob6"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip6"
-  bottom: "label_6"
   top: "prob6"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第7位字符
@@ -1318,12 +1300,9 @@ layer {
 }
 layer {
   name: "prob7"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip7"
-  bottom: "label_7"
   top: "prob7"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号第8位字符
@@ -1351,12 +1330,9 @@ layer {
 }
 layer {
   name: "prob8"
-  type: "SoftmaxWithLoss"
+  type: "Softmax"
   bottom: "ip8"
-  bottom: "label_8"
   top: "prob8"
-  # 权重
-  loss_weight: 0.10
 }
 #########################################
 #  车牌号是字符数：7 or 8
@@ -1383,11 +1359,8 @@ layer {
   }
 }
 layer {
-  name: "prob9"
-  type: "SoftmaxWithLoss"
+  name: "char_num_prob"
+  type: "Softmax"
   bottom: "ip9"
-  bottom: "label_9"
-  top: "prob9"
-  # 权重
-  loss_weight: 0.20
+  top: "char_num_prob"
 }

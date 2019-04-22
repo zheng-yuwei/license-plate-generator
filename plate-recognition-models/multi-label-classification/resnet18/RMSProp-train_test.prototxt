@@ -12,7 +12,7 @@ layer {
         scale: 0.00390625
     }
     data_param {
-        source: "/home/data_160/data1/license_plate/license-plate-generator/generate_multi_label_lmdb/multi_label_lmdb/train_lmdb/"
+        source: "/home/data_160/data1/license_plate/license-plate-generator/generate_multi_label_lmdb/multi_label_lmdb/all_lmdb/"
         batch_size: 240
         backend: LMDB
     }
@@ -1512,7 +1512,7 @@ layer {
   bottom: "label_1"
   top: "prob1"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第2位字符
@@ -1545,7 +1545,7 @@ layer {
   bottom: "label_2"
   top: "prob2"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第3位字符
@@ -1578,7 +1578,7 @@ layer {
   bottom: "label_3"
   top: "prob3"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第4位字符
@@ -1611,7 +1611,7 @@ layer {
   bottom: "label_4"
   top: "prob4"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第5位字符
@@ -1644,7 +1644,7 @@ layer {
   bottom: "label_5"
   top: "prob5"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第6位字符
@@ -1677,7 +1677,7 @@ layer {
   bottom: "label_6"
   top: "prob6"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第7位字符
@@ -1710,7 +1710,7 @@ layer {
   bottom: "label_7"
   top: "prob7"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.1111
 }
 #########################################
 #  车牌号第8位字符
@@ -1743,7 +1743,7 @@ layer {
   bottom: "label_8"
   top: "prob8"
   # 权重
-  loss_weight: 0.10
+  loss_weight: 0.00010
 }
 #########################################
 #  车牌号是字符数：7 or 8
@@ -1776,5 +1776,5 @@ layer {
   bottom: "label_9"
   top: "prob9"
   # 权重
-  loss_weight: 0.20
+  loss_weight: 0.2222
 }

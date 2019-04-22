@@ -8,12 +8,12 @@ display: 500
 average_loss: 100
 
 lr_policy: "multifixed"
-stagelr: 0.00001  # 1
-stagelr: 0.0001  # 2
-stagelr: 0.00005  # 3
-stagelr: 0.00001  # 4
-stagelr: 0.000001  # 5
-stagelr: 0.0000001  # 6
+stagelr: 0.001  # 1
+stagelr: 0.01  # 2
+stagelr: 0.005  # 3
+stagelr: 0.0001  # 4
+stagelr: 0.00001  # 5
+stagelr: 0.000001  # 6
 stageiter: 10000  # 1
 stageiter: 40000  # 2
 stageiter: 70000  # 3

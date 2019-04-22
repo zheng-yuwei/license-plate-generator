@@ -2,68 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6b9e3c-0f52-48af-b8f4-917a761b023f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_license_plate.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_license_plate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/00_甘A0W9U9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/00_皖JP7Z46.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/01_渝R6P85G.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/01_青AY1G55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/02_浙X4DZ51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/02_蒙XX83H0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/03_皖C2HW16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/03_蒙NLP471.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/04_皖D785JQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/04_藏H54HU0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/05_京X48LL5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/05_桂UP03K2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/06_渝W63CD0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/06_鄂U60RJ1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/07_蒙U17CL7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/07_赣S8Q147.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/08_琼XFN464.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/08_闽B99EB1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/09_甘YJ5A31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_blue/09_苏JA147V.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/00_粤YT06R0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/00_赣UV0B03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/01_宁Y6T4E9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/01_豫WKB412.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/02_粤F7F635.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/02_豫B9J2Z0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/03_藏F11LD1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/03_贵PKT044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/04_京F2T25S.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/04_晋NX84E5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/05_吉V14Q9Q.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/05_辽A48GP6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/06_宁M2L6V8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/06_晋E146LP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/07_川M41A9V.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/07_琼S4P85Y.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/08_粤B87S2V.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/08_陕F54ZW9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/09_冀FPZ908.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/single_yellow/09_吉P5DU24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/00_云HD40984.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/00_鲁CF23225.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/01_豫QD96106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/01_青BFA1001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/02_苏KD38100.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/02_闽ED96706.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/03_青AFV2900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/03_黑QDE9515.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/04_晋KFA4659.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/04_琼BFA4418.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/05_桂FFQ8217.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/05_甘XDG6119.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/06_云YDR7996.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/06_辽QF15431.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/07_桂CDQ1150.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/07_黑VD15418.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/08_宁YF71827.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/08_新NDZ8091.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/09_吉XDF3229.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate_images/small_new_energy/09_津MDW4893.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/solver-RMSProp.prototxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train-RMSProp.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/file_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/file_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/generate_lmdb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_lmdb.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/generate_txt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/deploy.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/deploy.prototxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/solver.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/solver.prototxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/train.sh" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/train_test.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train_test.prototxt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,23 +28,23 @@
     <session id="-1825729126">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="md" value="5" />
+          <entry key="md" value="6" />
           <entry key="py" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="5" />
+          <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="26" />
         </counts>
@@ -103,13 +53,13 @@
         <counts>
           <entry key="Python Console" value="174" />
           <entry key="dummy" value="16" />
-          <entry key="md" value="174" />
+          <entry key="md" value="558" />
           <entry key="py" value="4648" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="174" />
+          <entry key="Markdown" value="558" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="4822" />
         </counts>
@@ -118,63 +68,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/augment_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6027">
-              <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
-              <folding>
-                <element signature="e#211#221#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_chars_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-              <folding>
-                <element signature="e#123#144#0" expanded="true" />
-                <marker date="1555585327886" expanded="true" signature="2481:2490" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_license_plate_number.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#137#155#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_plate_template.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+        <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="21">
-                <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="231">
+                <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -208,7 +107,9 @@
         <option value="$PROJECT_DIR$/generate_license_plate_number.py" />
         <option value="$PROJECT_DIR$/augment_image.py" />
         <option value="$PROJECT_DIR$/generate_license_plate.py" />
+        <option value="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md" />
       </list>
     </option>
   </component>
@@ -219,9 +120,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="942" />
-    <option name="width" value="987" />
-    <option name="height" value="1040" />
+    <option name="x" value="941" />
+    <option name="width" value="988" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -235,6 +136,24 @@
             <path>
               <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
+              <item name="multi-label-classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
+              <item name="multi-label-classification" type="462c0819:PsiDirectoryNode" />
+              <item name="resnet18" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,7 +243,7 @@
     <frame x="-7" y="-7" width="1340" height="720" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26131046" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2652106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -425,30 +344,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/augment_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6027">
-          <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
-          <folding>
-            <element signature="e#211#221#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_chars_image.py">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_plate_template.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-          <folding>
-            <element signature="e#123#144#0" expanded="true" />
-            <marker date="1555585327886" expanded="true" signature="2481:2490" ph="..." />
-          </folding>
+        <state relative-caret-position="84">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generate_license_plate_number.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
+        <state relative-caret-position="-1743">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#137#155#0" expanded="true" />
@@ -456,21 +376,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_plate_template.py">
+    <entry file="file://$PROJECT_DIR$/generate_chars_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="1404">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding>
+            <element signature="e#123#144#0" expanded="true" />
+            <marker date="1555585327886" expanded="true" signature="2481:2490" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/augment_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
+          <folding>
+            <element signature="e#211#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="231">
+            <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

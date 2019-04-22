@@ -1,4 +1,4 @@
-net: "train_test.prototxt"
+net: "RMSProp-train_test.prototxt"
 
 # 测试需要加载测试数据，占内存，早期训练先不用
 # test_iter: 150  # 30000 / 200 = 150
