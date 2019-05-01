@@ -15,7 +15,7 @@
 4. images：各种车牌底牌（蓝色底牌等），污渍图片（图像增强使用）；
 5. plate_images：生成的车牌图片的存放路径。
 6. plate-recognition-models：车牌识别模型
-    - multi-label-classification：多标签分类模型，下面包含了生成lmdb的脚本和参考resnet18写的多标签分类模型；
+    - multi-label-classification：多标签分类模型，下面包含caffe和tensorflow版本；
 
 ### 程序结构说明
 - license_plate_elements.py: 车牌号元素，其中定义：
