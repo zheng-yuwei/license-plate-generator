@@ -12,6 +12,7 @@ class LicensePlateImageGenerator(object):
     single_blue_plate_bg = './images/single_blue1.bmp'
     small_new_energy_plate_bg = './images/small_new_energy.jpg'
     single_yellow1_plate_bg = './images/single_yellow1.bmp'
+    police1_plate_bg = './images/police1.bmp'
     
     def __init__(self, plate_type):
         """ 初始化定义车牌类型，以及不同类型的车牌底牌图片 """
@@ -23,6 +24,8 @@ class LicensePlateImageGenerator(object):
             plate_image = cv2.imread(LicensePlateImageGenerator.small_new_energy_plate_bg)
         elif plate_type == 'single_yellow':
             plate_image = cv2.imread(LicensePlateImageGenerator.single_yellow1_plate_bg)
+        elif plate_type == 'police':
+            plate_image = cv2.imread(LicensePlateImageGenerator.police1_plate_bg)
         else:
             raise ValueError('该类型车牌目前功能尚未完成！')
             

@@ -1,0 +1,44 @@
+net: "recognition-resnet50-train-test.prototxt"
+
+# 测试需要加载测试数据，占内存，早期训练先不用
+test_iter: 1000  # 90315 / 10 = 9031
+test_interval: 18064  # 722522 / 40 = 18064
+test_initialization: false
+display: 200
+average_loss: 100
+
+#type: "RMSProp"
+#lr_policy: "fixed"
+#base_lr: 0.0001
+#rms_decay: 0.98
+
+
+type: "Adam"
+momentum: 0.9
+momentum2: 0.999
+
+lr_policy: "multifixed"
+stagelr: 0.001
+stagelr: 0.0001
+stagelr: 0.00001
+stagelr: 0.000001
+stagelr: 0.0000001
+stageiter: 3000
+stageiter: 6000
+stageiter: 9000
+stageiter: 12000
+stageiter: 15000
+#momentum: 0.9
+
+
+
+
+max_iter:  20000
+
+weight_decay: 0.00005
+
+snapshot:1000
+snapshot_prefix: "/home/data_160/data3/smart_home/xiongxin-yuwei/plate_recognition/models/resnet50/lp_recognization"
+solver_mode: GPU
+snapshot_format: BINARYPROTO
+

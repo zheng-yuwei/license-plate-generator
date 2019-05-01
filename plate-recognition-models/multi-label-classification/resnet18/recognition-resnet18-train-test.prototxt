@@ -1,18 +1,71 @@
 name: "license-plate-recognition"
 # 输入层，只进行归一化
 layer {
-    name: "data"
-    type: "Input"
+    name: "input"
+    type: "Data"
     top: "data"
-    input_param {
-        shape: {
-            dim: 1
-            dim: 3
-            dim: 48
-            dim: 144
-        }
+    top: "label"
+    include {
+        phase: TRAIN
+    }
+    transform_param {
+        scale: 0.00390625
+    }
+    data_param {
+        # /home/data_160/data3/smart_home/xiongxin-yuwei/plate_recognition/new_plate_lmdb/fushi_xin/multi_label_lmdb/all_lmdb/
+        source: "/home/data_160/data3/smart_home/xiongxin-yuwei/plate_recognition/new_plate_lmdb/fushi_xin/multi_label_lmdb/train_lmdb/"
+        batch_size: 240
+        backend: LMDB
     }
 }
+layer {
+    name: "input"
+    type: "Data"
+    top: "data"
+    top: "label"
+    include {
+        phase: TEST
+    }
+    transform_param {
+        scale: 0.00390625
+    }
+    data_param {
+        source: "/home/data_160/data3/smart_home/xiongxin-yuwei/plate_recognition/new_plate_lmdb/fushi_xin/multi_label_lmdb/validate_lmdb/"
+        batch_size: 40
+        backend: LMDB
+    }
+}
+# 输入标签切割层，切割为10个label，含义见下方loss
+layer {
+  name: "label_slices"
+  type: "Slice"
+  bottom: "label"
+  top: "label_1"
+  top: "label_2"
+  top: "label_3"
+  top: "label_4"
+  top: "label_5"
+  top: "label_6"
+  top: "label_7"
+  top: "label_8"
+  top: "label_char_num"
+  top: "label_plate_color"
+  slice_param {
+    axis: 1
+    slice_point: 1
+    slice_point: 2
+    slice_point: 3
+    slice_point: 4
+    slice_point: 5
+    slice_point: 6
+    slice_point: 7
+    slice_point: 8
+    slice_point: 9
+  }
+}
+
+
+
 
 
 
@@ -36,7 +89,20 @@ layer {
             type: "msra"
         }
         bias_term: false
+    }
+}
 
+layer {
+    bottom: "conv1"
+    top: "conv1"
+    name: "bn_conv1"
+    type: "BatchNorm"
+    batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
     }
 }
 
@@ -47,6 +113,9 @@ layer {
     type: "BatchNorm"
     batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -106,7 +175,23 @@ layer {
     name: "bn2a_branch1"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res2a_branch1"
+    top: "res2a_branch1"
+    name: "bn2a_branch1"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -144,7 +229,23 @@ layer {
     name: "bn2a_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res2a_branch2a"
+    top: "res2a_branch2a"
+    name: "bn2a_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -188,7 +289,23 @@ layer {
     name: "bn2a_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res2a_branch2b"
+    top: "res2a_branch2b"
+    name: "bn2a_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -243,7 +360,23 @@ layer {
     name: "bn2b_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res2b_branch2a"
+    top: "res2b_branch2a"
+    name: "bn2b_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -288,7 +421,23 @@ layer {
     name: "bn2b_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res2b_branch2b"
+    top: "res2b_branch2b"
+    name: "bn2b_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -344,7 +493,23 @@ layer {
     name: "bn3a_branch1"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res3a_branch1"
+    top: "res3a_branch1"
+    name: "bn3a_branch1"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -382,7 +547,23 @@ layer {
     name: "bn3a_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res3a_branch2a"
+    top: "res3a_branch2a"
+    name: "bn3a_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -427,7 +608,23 @@ layer {
     name: "bn3a_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res3a_branch2b"
+    top: "res3a_branch2b"
+    name: "bn3a_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -483,7 +680,23 @@ layer {
     name: "bn3b_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res3b_branch2a"
+    top: "res3b_branch2a"
+    name: "bn3b_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -528,7 +741,23 @@ layer {
     name: "bn3b_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res3b_branch2b"
+    top: "res3b_branch2b"
+    name: "bn3b_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -584,7 +813,23 @@ layer {
     name: "bn4a_branch1"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res4a_branch1"
+    top: "res4a_branch1"
+    name: "bn4a_branch1"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -622,7 +867,23 @@ layer {
     name: "bn4a_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res4a_branch2a"
+    top: "res4a_branch2a"
+    name: "bn4a_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -667,7 +928,23 @@ layer {
     name: "bn4a_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res4a_branch2b"
+    top: "res4a_branch2b"
+    name: "bn4a_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -723,7 +1000,23 @@ layer {
     name: "bn4b_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res4b_branch2a"
+    top: "res4b_branch2a"
+    name: "bn4b_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -768,7 +1061,23 @@ layer {
     name: "bn4b_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res4b_branch2b"
+    top: "res4b_branch2b"
+    name: "bn4b_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -824,7 +1133,23 @@ layer {
     name: "bn5a_branch1"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res5a_branch1"
+    top: "res5a_branch1"
+    name: "bn5a_branch1"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -862,7 +1187,23 @@ layer {
     name: "bn5a_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res5a_branch2a"
+    top: "res5a_branch2a"
+    name: "bn5a_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -907,7 +1248,23 @@ layer {
     name: "bn5a_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res5a_branch2b"
+    top: "res5a_branch2b"
+    name: "bn5a_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -963,7 +1320,23 @@ layer {
     name: "bn5b_branch2a"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res5b_branch2a"
+    top: "res5b_branch2a"
+    name: "bn5b_branch2a"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -1008,7 +1381,23 @@ layer {
     name: "bn5b_branch2b"
     type: "BatchNorm"
     batch_norm_param{
+        use_global_stats: false
+        moving_average_fraction: 0.95
+    }
+    include {
+        phase: TRAIN
+    }
+}
+layer {
+    bottom: "res5b_branch2b"
+    top: "res5b_branch2b"
+    name: "bn5b_branch2b"
+    type: "BatchNorm"
+    batch_norm_param{
         use_global_stats: true
+    }
+    include {
+        phase: TEST
     }
 }
 
@@ -1060,8 +1449,8 @@ layer {
 #########################################
 layer {
     bottom: "pool5"
-    top: "ip_shared"
-    name: "ip_shared"
+    top: "ip_fc"
+    name: "ip_fc"
     type: "InnerProduct"
     param {
         lr_mult: 1
@@ -1098,10 +1487,10 @@ layer {
 #  车牌号第1位字符
 #########################################
 layer {
-    name: "ip1"
+    name: "char1"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip1"
+    bottom: "ip_fc"
+    top: "char1"
     param {
         lr_mult: 1
     }
@@ -1119,19 +1508,21 @@ layer {
   }
 }
 layer {
-  name: "prob1"
-  type: "Softmax"
-  bottom: "ip1"
-  top: "prob1"
+    name: "prob1"
+    type: "SoftmaxWithLoss"
+    bottom: "char1"
+    bottom: "label_1"
+    top: "prob1"
+    loss_weight: 0.15
 }
 #########################################
 #  车牌号第2位字符
 #########################################
 layer {
-    name: "ip2"
+    name: "char2"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip2"
+    bottom: "ip_fc"
+    top: "char2"
     param {
         lr_mult: 1
     }
@@ -1149,19 +1540,21 @@ layer {
   }
 }
 layer {
-  name: "prob2"
-  type: "Softmax"
-  bottom: "ip2"
-  top: "prob2"
+    name: "prob2"
+    type: "SoftmaxWithLoss"
+    bottom: "char2"
+    bottom: "label_2"
+    top: "prob2"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第3位字符
 #########################################
 layer {
-    name: "ip3"
+    name: "char3"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip3"
+    bottom: "ip_fc"
+    top: "char3"
     param {
         lr_mult: 1
     }
@@ -1179,19 +1572,21 @@ layer {
   }
 }
 layer {
-  name: "prob3"
-  type: "Softmax"
-  bottom: "ip3"
-  top: "prob3"
+    name: "prob3"
+    type: "SoftmaxWithLoss"
+    bottom: "char3"
+    bottom: "label_3"
+    top: "prob3"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第4位字符
 #########################################
 layer {
-    name: "ip4"
+    name: "char4"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip4"
+    bottom: "ip_fc"
+    top: "char4"
     param {
         lr_mult: 1
     }
@@ -1209,19 +1604,21 @@ layer {
   }
 }
 layer {
-  name: "prob4"
-  type: "Softmax"
-  bottom: "ip4"
-  top: "prob4"
+    name: "prob4"
+    type: "SoftmaxWithLoss"
+    bottom: "char4"
+    bottom: "label_4"
+    top: "prob4"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第5位字符
 #########################################
 layer {
-    name: "ip5"
+    name: "char5"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip5"
+    bottom: "ip_fc"
+    top: "char5"
     param {
         lr_mult: 1
     }
@@ -1239,19 +1636,21 @@ layer {
   }
 }
 layer {
-  name: "prob5"
-  type: "Softmax"
-  bottom: "ip5"
-  top: "prob5"
+    name: "prob5"
+    type: "SoftmaxWithLoss"
+    bottom: "char5"
+    bottom: "label_5"
+    top: "prob5"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第6位字符
 #########################################
 layer {
-    name: "ip6"
+    name: "char6"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip6"
+    bottom: "ip_fc"
+    top: "char6"
     param {
         lr_mult: 1
     }
@@ -1269,19 +1668,21 @@ layer {
   }
 }
 layer {
-  name: "prob6"
-  type: "Softmax"
-  bottom: "ip6"
-  top: "prob6"
+    name: "prob6"
+    type: "SoftmaxWithLoss"
+    bottom: "char6"
+    bottom: "label_6"
+    top: "prob6"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第7位字符
 #########################################
 layer {
-    name: "ip7"
+    name: "char7"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip7"
+    bottom: "ip_fc"
+    top: "char7"
     param {
         lr_mult: 1
     }
@@ -1299,19 +1700,21 @@ layer {
   }
 }
 layer {
-  name: "prob7"
-  type: "Softmax"
-  bottom: "ip7"
-  top: "prob7"
+    name: "prob7"
+    type: "SoftmaxWithLoss"
+    bottom: "char7"
+    bottom: "label_7"
+    top: "prob7"
+    loss_weight: 0.1
 }
 #########################################
 #  车牌号第8位字符
 #########################################
 layer {
-    name: "ip8"
+    name: "char8"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip8"
+    bottom: "ip_fc"
+    top: "char8"
     param {
         lr_mult: 1
     }
@@ -1329,19 +1732,24 @@ layer {
   }
 }
 layer {
-  name: "prob8"
-  type: "Softmax"
-  bottom: "ip8"
-  top: "prob8"
+    name: "prob8"
+    type: "SoftmaxWithLoss"
+    bottom: "char8"
+    bottom: "label_8"
+    top: "prob8"
+    loss_weight: 0.1
+    loss_param{
+        ignore_label: -1
+    }
 }
 #########################################
 #  车牌号是字符数：7 or 8
 #########################################
 layer {
-    name: "ip9"
+    name: "char_num"
     type: "InnerProduct"
-    bottom: "ip_shared"
-    top: "ip9"
+    bottom: "ip_fc"
+    top: "char_num"
     param {
         lr_mult: 1
     }
@@ -1359,8 +1767,43 @@ layer {
   }
 }
 layer {
-  name: "char_num_prob"
-  type: "Softmax"
-  bottom: "ip9"
-  top: "char_num_prob"
+    name: "char_num_prob"
+    type: "SoftmaxWithLoss"
+    bottom: "char_num"
+    bottom: "label_char_num"
+    top: "char_num_prob"
+    loss_weight: 0.1
+}
+
+#########################################
+#  车牌颜色
+#########################################
+layer {
+    name: "plate_color"
+    type: "InnerProduct"
+    bottom: "ip_fc"
+    top: "plate_color"
+    param {
+        lr_mult: 1
+    }
+    param {
+        lr_mult: 2
+    }
+    inner_product_param {
+        num_output: 6
+        weight_filler {
+        type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+    name: "plate_color_prob"
+    type: "SoftmaxWithLoss"
+    bottom: "plate_color"
+    bottom: "label_plate_color"
+    top: "plate_color_prob"
+    loss_weight: 0.05
 }

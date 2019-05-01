@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6b9e3c-0f52-48af-b8f4-917a761b023f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/license-plate-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/license-plate-generator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/solver-RMSProp.prototxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train-RMSProp.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/file_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/file_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/generate_lmdb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_lmdb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/generate_txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/deploy.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/deploy.prototxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/solver.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/solver.prototxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/train.sh" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/resnet18/train_test.prototxt" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train_test.prototxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_plate_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_plate_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/license_plate_elements.py" beforeDir="false" afterPath="$PROJECT_DIR$/license_plate_elements.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_lmdb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_lmdb.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/RMSProp-solver.prototxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/RMSProp-train.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/RMSProp-train_test.prototxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/deploy.prototxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/solver.prototxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/train_test.prototxt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,61 +30,54 @@
     <session id="-1825729126">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="md" value="6" />
-          <entry key="py" value="26" />
+          <entry key="bmp" value="10" />
+          <entry key="md" value="15" />
+          <entry key="prototxt" value="1" />
+          <entry key="py" value="41" />
+          <entry key="sh" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="6" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="26" />
+          <entry key="Bash" value="1" />
+          <entry key="Image" value="10" />
+          <entry key="Markdown" value="15" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="174" />
+          <entry key="Python Console" value="337" />
           <entry key="dummy" value="16" />
-          <entry key="md" value="558" />
-          <entry key="py" value="4648" />
+          <entry key="md" value="788" />
+          <entry key="py" value="6365" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="558" />
+          <entry key="Markdown" value="788" />
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="4822" />
+          <entry key="Python" value="6702" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="231">
-                <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -102,7 +97,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/generate_license_plate_image.py" />
-        <option value="$PROJECT_DIR$/generate_plate_template.py" />
         <option value="$PROJECT_DIR$/generate_chars_image.py" />
         <option value="$PROJECT_DIR$/generate_license_plate_number.py" />
         <option value="$PROJECT_DIR$/augment_image.py" />
@@ -110,6 +104,11 @@
         <option value="$PROJECT_DIR$/plate-recognization-models/multi-label-classification/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md" />
+        <option value="//10.90.46.160/dl/data3/smart_home/xiongxin-yuwei/plate_recognition/README.md" />
+        <option value="$PROJECT_DIR$/license_plate_elements.py" />
+        <option value="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py" />
+        <option value="$PROJECT_DIR$/plate-recognition-models/multi-label-classification/recognization_engine.py" />
+        <option value="$PROJECT_DIR$/generate_plate_template.py" />
       </list>
     </option>
   </component>
@@ -120,16 +119,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="941" />
-    <option name="width" value="988" />
-    <option name="height" value="1042" />
+    <option name="x" value="-245" />
+    <option name="y" value="403" />
+    <option name="width" value="1946" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,33 +136,16 @@
               <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
-              <item name="multi-label-classification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-plate-generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-plate-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="plate-recognition-models" type="462c0819:PsiDirectoryNode" />
-              <item name="multi-label-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="resnet18" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/hard/飞哥端到端" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2019车牌检测/test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -241,9 +223,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1340" height="720" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2652106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28237128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -334,9 +315,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/license_plate_elements.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/generate_license_plate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -359,31 +337,10 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_plate_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_license_plate_number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1743">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#137#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generate_chars_image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1404">
           <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-          <folding>
-            <element signature="e#123#144#0" expanded="true" />
-            <marker date="1555585327886" expanded="true" signature="2481:2490" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -391,21 +348,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
-          <folding>
-            <element signature="e#211#221#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:////10.90.46.160/dl/data3/smart_home/xiongxin-yuwei/plate_recognition/README.md" />
+    <entry file="file://$USER_HOME$/Desktop/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="311" column="63" selection-start-line="311" selection-start-column="56" selection-end-line="311" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/resnet18/recognition-resnet18-deploy.prototxt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_lmdb.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/file_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1367">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/recognization_engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/generate_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plate-recognition-models/multi-label-classification/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="231">
-            <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <first_editor relative-caret-position="273">
+            <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/single_black2.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/double_yellow1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/11.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/12.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/army2.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/army1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/double_white1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/single_blue1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/single_yellow1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/single_black1.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license_plate_elements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1486">
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_plate_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_license_plate_number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2312">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

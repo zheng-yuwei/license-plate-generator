@@ -77,6 +77,9 @@ class LicensePlateElements(object):
         'factory': 15, 'single_black': 16, 'other': 17,
     }
     
+    # 车牌颜色
+    plate_color_indices = {'blue': 0, 'yellow': 1, 'green': 2, 'white': 3, 'black': 4, 'other': 5, }
+    
     # 是否存在车牌
     is_exist_plate_enum = {'exist': 0, 'non-exist': 1}
     
